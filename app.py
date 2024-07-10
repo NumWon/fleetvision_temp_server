@@ -6,6 +6,7 @@ app = Flask(__name__)
 @app.route('/obd', methods=['POST'])
 def receive_obd_data():
     data = request.json
+    print("Data recieved: ", data)
     response_data = {
         "status": "success",
         "data": data,
